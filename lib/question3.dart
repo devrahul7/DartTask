@@ -1,0 +1,31 @@
+// A student will not be allowed to sit in an exam if his/her attendance is less than
+// 75%. Take the following input from the user: Number of classes held, Number of
+// classes attended. Print the percentage of classes attended and whether the
+// student is allowed to sit in the exam or not.
+// Hint: Calculate percentage as (attended / held) * 100. Use an if-else block to
+// check if the percentage is >= 75. Use double or num types to avoid integer
+// division issues. A student will not be allowed to sit in an exam if his/her attendance is less than
+// 75%. Take the following input from the user: Number of classes held, Number of
+// classes attended. Print the percentage of classes attended and whether the
+// student is allowed to sit in the exam or not.
+// Hint: Calculate percentage as (attended / held) * 100. Use an if-else block to
+// check if the percentage is >= 75. Use double or num types to avoid integer
+// division issues.
+
+import 'dart:io';
+
+void main() {
+  print("enter number of classes held");
+  double nclassheld = double.parse(stdin.readLineSync()!);
+  print("enter number of classes attended");
+  double nclassattended = double.parse(stdin.readLineSync()!);
+
+  double calcPercentage = (nclassattended / nclassheld) * 100;
+  print(calcPercentage);
+
+  if (calcPercentage < 75) {
+    print("Not allowed to sit in exam");
+  } else {
+    print("allowed to sit in exam");
+  }
+}
