@@ -1,3 +1,5 @@
+
+
 class Calculator {
   int num1;
   int num2;
@@ -10,7 +12,13 @@ class Calculator {
   double divide() => num1 / num2;
 }
 
+
 void main() {
-  Calculator c1 = Calculator(num1: 20, num2: 10);
-  print(c1.add());
+
+  Calculator cal = Calculator(num1: 22, num2: 10);
+  print(cal.add());
+  print(cal.subtract());
+  print(cal.multiply());
+  print(cal.divide());
+
 }

@@ -1,22 +1,20 @@
-// class : blueprint : properties and behaviors
-
 class Person {
-  // Properties : variables
   String name;
   int age;
   bool status;
 
-  // Constructor : 1. obejct creation 2. properties initialize
-  // no return type
+  // Constructor: Create a object and properites initialize
   Person({required this.name, required this.age, required this.status});
 
   @override
-  String toString() {
-    return "$name $age $status";
+  String toString(){
+    return "$name, $age, $status";
   }
+
 }
 
-void main() {
-  Person p = Person(name: "rahul", age: 22, status: true);
-  print(p);
+void main(){
+  Person p1 = Person(name: "sandesh", age: 23, status: true);
+  print(p1);
+  print(p1.name);
 }

@@ -1,22 +1,28 @@
 class Person {
-  //properties: variables
+  // final -> runtime
   final String name;
   final int age;
   final bool status;
 
-  static const String surName = "Bhattarai";
+  // const -> compile time
+  static const String surname = "shahi";
 
-  //Constructor : 1.object creation 2. properties initialization
-  //no return type
+  // Constructor: Create a object and properites initialize
   Person({required this.name, required this.age, required this.status});
+
+  String getFullName() {
+    return "$name, $surname";
+  }
 
   @override
   String toString() {
-    return "$name $age $status";
+    return "$name, $age, $status";
   }
 }
 
 void main() {
-  Person p = Person(name: "rahul", age: 20, status: true);
-  print(p);
+  Person p1 = Person(name: "sandesh", age: 23, status: true);
+  print(p1);
+  p1.getFullName();
+  print(p1.name);
 }
