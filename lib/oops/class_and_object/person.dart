@@ -14,7 +14,7 @@ class Person {
 }
 
 void main(){
-  Person p1 = Person(name: "sandesh", age: 23, status: true);
+  Person p1 = Person(name: "rahul", age: 23, status: true);
   print(p1);
   print(p1.name);
 }
