@@ -41,9 +41,9 @@ class Person {
 }
 
 void main() {
-  Person p1 = Person(name: "sandesh", age: 23, status: true);
+  Person p1 = Person(name: "rahul", age: 22, status: true);
   print(p1);
-  p1.setName("sandy");
+  p1.setName("rudraksha");
   p1.setAge = 32;
   print(p1);
 
