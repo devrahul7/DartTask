@@ -1,24 +1,34 @@
-
-
 class Calculator {
   int num1;
   int num2;
 
-  Calculator({required this.num1, required this.num2});
+  Calculator(this.num1, this.num2);
+  void add() {
+    print((num1 + num2));
+  }
 
-  int add() => num1 + num2;
-  int subtract() => num1 - num2;
-  int multiply() => num1 * num2;
-  double divide() => num1 / num2;
+  void subtract() {
+    print((num1 - num2));
+  }
+
+  void multiply() {
+    print((num1 * num2));
+  }
+
+  void divide() {
+    if (num2 == 0) {
+      print("division error");
+    } else {
+      print((num1 / num2));
+    }
+  }
 }
 
-
 void main() {
-
-  Calculator cal = Calculator(num1: 22, num2: 10);
-  print(cal.add());
-  print(cal.subtract());
-  print(cal.multiply());
-  print(cal.divide());
-
+  // ignore: unnecessary_new
+  Calculator c = new Calculator(20, 10);
+  c.add();
+  c.subtract();
+  c.multiply();
+  c.divide();
 }

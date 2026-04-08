@@ -3,18 +3,16 @@ class Person {
   int age;
   bool status;
 
-  // Constructor: Create a object and properites initialize
+  //Constructor
   Person({required this.name, required this.age, required this.status});
 
   @override
-  String toString(){
-    return "$name, $age, $status";
+  String toString() {
+    return "$name $age $status";
   }
-
 }
 
-void main(){
-  Person p1 = Person(name: "rahul", age: 23, status: true);
-  print(p1);
-  print(p1.name);
+void main() {
+  Person p = new Person(name: "rahul", age: 20, status: true);
+  print(p);
 }

@@ -1,32 +1,27 @@
 import 'dart:io';
 
 class SimpleInterest {
-  final int principle;
-  final int time;
-  final int rate;
+  double pr;
+  double ti;
+  double ra;
 
-
-  SimpleInterest({required this.principle, required this.time, required this.rate});
-
-
-  double interest() => (principle * time * rate) / 100;
+  SimpleInterest(this.pr, this.ti, this.ra);
+  
+  void display() {
+    print("Simple interest: ${(pr * ti * ra) / 100}");
+  }
 }
 
-
 void main() {
+  print("Enter value of p");
+  double p = double.parse(stdin.readLineSync()!);
+  print("Enter value of t");
+  double t = double.parse(stdin.readLineSync()!);
+  print("Enter value of r");
+  double r = double.parse(stdin.readLineSync()!);
 
-  int principle, time, rate;
+  SimpleInterest si = new SimpleInterest(p, t, r);
+  si.display();
 
-  print("Enter principle");
-  principle = int.parse(stdin.readLineSync()!);
-
-  print("Enter time");
-  time = int.parse(stdin.readLineSync()!);
-
-
-  print("Enter rate");
-  rate = int.parse(stdin.readLineSync()!);
-
-  SimpleInterest si = SimpleInterest(principle: principle, time: time, rate: rate);
-  print("Interest: ${si.interest()}");
+  
 }
